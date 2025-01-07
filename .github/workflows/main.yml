@@ -15,9 +15,9 @@ jobs:
           fetch-depth: 0
       - name: Add remote 
         env:
-          HF: ${{ secrets.MLOP_PROJECT }}
-        run: git remote add space https://FaizanArif:$HF@huggingface.co/spaces/FaizanArif/MLOPs_Project
+          MLOP_PROJECT: ${{ secrets.MLOP_PROJECT }}
+        run: git remote add space https://FaizanArif:$MLOP_PROJECT@huggingface.co/spaces/FaizanArif/MLOPs_Project
       - name: Push to hub
         env:
-          HF: ${{ secrets.MLOP_PROJECT }}
-        run: git push --force https://FaizanArif:$HF@huggingface.co/spaces/FaizanArif/MLOPs_Project main
+          MLOP_PROJECT: ${{ secrets.MLOP_PROJECT }}
+        run: git push --force https://FaizanArif:$MLOP_PROJECT@huggingface.co/spaces/FaizanArif/MLOPs_Project main
